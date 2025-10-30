@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartu Fakta Menarik — Teknologi</title>
+  <style>
+
+
+
+.card-fakta {
+      width: 500px;
+      height: 500px;
+      text-align: center;
+      border-radius: 30px;
+      background-color: rgba(35, 37, 36, 0.5);
+      padding: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-fakta img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: opacity 0.5s ease;
+    }
+
+
+.btn-next {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-next:hover {
+      background-color: #45a049;
+    }
+    
+.card-footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #333;
+    }
+     .facts-list {
+      text-align: left;
+      margin: 15px;
+      transition: opacity 0.5s ease;}
+
+  .fade-out {
+      opacity: 0;
+    }
+
+   
+  </style>
+</head>
+<body style="background-color: lightblue;">
+<center>
+  <div class="card-fakta">
+    <img id="factImage" src="TEK.jpg" />
+    <div class="content">
+      <h2>Fakta Menarik </h2>
+      <p class="subtitle">Tahukah kamu fakta-fakta unik ini?</p>
+
+      <ul class="facts-list" id="factList">
+        <li>Komputer pertama berukuran sebesar satu ruangan dan beratnya lebih dari 27 ton!</li>
+        <li>Setiap 2 detik, ada lebih dari 100.000 pencarian baru di Google di seluruh dunia.</li>
+        <li>iPhone pertama kali diluncurkan pada tahun 2007 dan mengubah cara orang berinteraksi dengan teknologi seluler.</li>
+        <li>AI kini membantu dokter mendiagnosis penyakit lebih cepat dan akurat.</li>
+      </ul>
+
+      <button class="btn-next" id="nextFact">🔁 Fakta Selanjutnya</button>
+
+      <div class="card-footer">© 2025 | Fakta menarik• Informatika SMAK KARUNIA</div>
+    </div>
+  </div>
+
+  <script>
+   const factData = [
+      {
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+        facts: [
+          "Komputer pertama berukuran sebesar satu ruangan!",
+          "Internet pertama kali dikembangkan pada tahun 1960-an untuk komunikasi militer.",
+          "Mouse komputer pertama dibuat dari kayu oleh Douglas Engelbart."]
+      },
+
+      { image:"koala.jpeg",
+      facts: [
+"Tidur Lama  Koala tidur hingga  jam sehari.",
+"Makan Daun Eucalyptus Hanya makan sekitar  jenis daun eucalyptus.",
+"Sidik Jari Mirip Manusia Polanya hampir sama seperti sidik jari manusia.",
+"Terancam Punah Populasinya menurun karena hilangnya habitat dan kebakaran hutan."
+]
+  } 
+,
+{image:"meerkat.jpg",facts:[  "Meerkat hidup dalam kelompok besar yang disebut kawanan, gerombolan, geng, atau klan, yang bisa mencapai hingga 50 individu.",
+" Mereka membagikan tugas, seperti anggota kelompok yang berjaga untuk mengawasi predator sambil berdiri tegak di tanah lapang atau semak-semak, sementara yang lain mencari makan atau merawat anak-anaknya.",
+" Mereka tinggal di liang bawah tanah yang kompleks dengan banyak pintu masuk dan ruangan untuk tidur dan buang air. "
+  
+]}]
+;
+      
+
+
+
+    
+      
+      const factList = document.getElementById("factList");
+    const factImage = document.getElementById("factImage");
+    const nextBtn = document.getElementById("nextFact");
+
+    nextBtn.addEventListener("click", () => {
+      factList.classList.add("fade-out");
+
+      setTimeout(() => {
+        const randomFact = factData[Math.floor(Math.random() * factData.length)];
+        factImage.style.opacity = 0;
+
+        setTimeout(() => {
+          factImage.src = randomFact.image;
+          factImage.style.opacity = 1;
+        }, 400);
+
+        factList.innerHTML = randomFact.facts.map(f => `<li>${f}</li>`).join("");
+        factList.classList.remove("fade-out");
+      }, 500);
+    });
+  
+
+  </script>
+</center>
+</body>
+</html>
