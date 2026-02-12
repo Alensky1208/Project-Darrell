@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Eksplorasi Detail Maladewa</title>
+    <style>
+        :root {
+            --blue: #0077b6;
+            --dark: #1d3557;
+            --light: #f1faff;
+        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; background: #fdfdfd; color: #333; }
+        header { background: var(--dark); color: white; text-align: center; padding: 50px 20px; }
+        
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        
+        /* Judul Kategori Besar */
+        .category-title { 
+            border-left: 8px solid var(--blue); 
+            padding-left: 15px; 
+            margin-top: 60px; 
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Kotak untuk setiap item informasi */
+        .item-info {
+            display: flex;
+            gap: 20px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            align-items: center;
+        }
+
+        /* Kotak Foto di sebelah kiri/kanan */
+        .foto-box {
+            flex: 0 0 250px;
+            height: 180px;
+            background: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .foto-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .teks-box { flex: 1; }
+        h3 { margin-top: 0; color: var(--blue); }
+
+        /* Responsif untuk HP */
+        @media (max-width: 600px) {
+            .item-info { flex-direction: column; }
+            .foto-box { flex: 0 0 200px; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PANDUAN LENGKAP WISATA MALADEWA</h1>
+    <p>Sejarah, Budaya, Kota, dan Kuliner dalam Satu Halaman</p>
+</header>
+
+<div class="container">
+
+    <h2 class="category-title">I. Sejarah & Cagar Budaya</h2>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="masjid hukuru miskiy.jpg" alt="Masjid Hukuru Miskiy"></div>
+        <div class="teks-box">
+            <h3>1. Masjid Hukuru Miskiy</h3>
+            <p>Dibangun tahun 1656, ini adalah cagar budaya paling berharga yang terbuat dari susunan batu karang laut purba dengan ukiran kaligrafi Arab yang sangat halus.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="Muliaage_palace.jpg" alt="Istana Mulee-aage"></div>
+        <div class="teks-box">
+            <h3>2. Istana Mulee-aage</h3>
+            <p>Terletak di depan Masjid Jumat, istana bergaya kolonial ini dulunya merupakan kediaman Sultan Maladewa dan sekarang berfungsi sebagai kantor presiden.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="national museum of maladewa.JPG" alt="Museum Nasional"></div>
+        <div class="teks-box">
+            <h3>3. Museum Nasional Maladewa</h3>
+            <p>Menyimpan berbagai artefak dari era pra-Islam, kostum kerajaan, dan barang berharga milik Sultan terdahulu untuk menjaga warisan sejarah pulau.</p>
+        </div>
+    </div>
+
+
+    <h2 class="category-title">II. Seni & Pertunjukan Budaya</h2>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="boru deru.jpg" alt="Bodu Beru"></div>
+        <div class="teks-box">
+            <h3>1. Tari Bodu Beru</h3>
+            <p>Tarian rakyat paling populer yang menggunakan tiga buah drum besar dari kayu kelapa. Gerakannya melambangkan semangat kerja sama nelayan.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="thaara.jpg" alt="Thaara"></div>
+        <div class="teks-box">
+            <h3>2. Musik Thaara</h3>
+            <p>Jenis musik religi yang menggunakan rebana. Musik ini dibawa oleh orang-orang Arab di abad ke-17 dan sering dimainkan saat perayaan hari besar.</p>
+        </div>
+    </div>
+
+
+    <h2 class="category-title">III. Kuliner Khas</h2>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="mas huni.jpg" alt="Mas Huni"></div>
+        <div class="teks-box">
+            <h3>1. Mas Huni</h3>
+            <p>Hidangan sarapan wajib yang terbuat dari campuran tuna, kelapa parut, cabai, dan bawang. Dimakan bersama roti Roshi hangat.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="garudhiya.jpg" alt="Garudhiya"></div>
+        <div class="teks-box">
+            <h3>2. Garudhiya</h3>
+            <p>Sup ikan tuna bening yang sangat segar. Biasanya disajikan dengan nasi, jeruk nipis, dan cabai rawit untuk memberikan rasa asam pedas.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="heedhika.jpg" alt="Hedhikaa"></div>
+        <div class="teks-box">
+            <h3>3. Hedhikaa (Snack)</h3>
+            <p>Aneka gorengan tradisional yang diisi dengan daging ikan atau kelapa manis. Sangat populer dimakan saat sore hari bersama teh hangat.</p>
+        </div>
+    </div>
+
+    <h2 class="category-title">IV. Kota & Fasilitas Utama</h2>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="male fish market.jpg" alt="Pasar Ikan"></div>
+        <div class="teks-box">
+            <h3>1. Pasar Ikan Malé</h3>
+            <p>Jantung ekonomi kota Malé. Pengunjung bisa melihat ikan tuna raksasa hasil tangkapan nelayan lokal yang baru saja didaratkan di dermaga.</p>
+        </div>
+    </div>
+
+    <div class="item-info">
+        <div class="foto-box"><img src="artifical beach.jpg" alt="Pantai Buatan"></div>
+        <div class="teks-box">
+            <h3>2. Artificial Beach</h3>
+            <p>Fasilitas rekreasi di pusat kota Malé. Tempat favorit warga lokal untuk berenang dan menonton konser musik terbuka di tepi laut.</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
