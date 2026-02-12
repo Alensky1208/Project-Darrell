@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Kelompok</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- RESET & BASIC STYLE --- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6; /* Warna background abu-abu muda yang bersih */
+            color: #333;
+        }
+
+        /* --- SIDEBAR NAVIGATION --- */
+        nav {
+            width: 240px;
+            background-color: #2c3e50; /* Warna biru gelap elegan */
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            color: white;
+            z-index: 100;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-area {
+            padding: 30px 20px;
+            text-align: center;
+            background-color: #1a252f;
+        }
+
+        .logo-area h2 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 2px;
+            color: #ecf0f1;
+        }
+
+        .logo-area span {
+            color: #e67e22; /* Aksen oranye */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li a {
+            display: block;
+            color: #bdc3c7;
+            padding: 15px 25px;
+            text-decoration: none;
+            transition: 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        nav li a:hover {
+            background-color: #34495e;
+            color: white;
+            padding-left: 35px; /* Efek geser saat di-hover */
+        }
+
+        nav i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        main {
+            margin-left: 240px; /* Memberi ruang untuk sidebar */
+            padding: 0;
+        }
+
+        /* --- HERO HEADER --- */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://wallpapers.com/images/high/4k-ultra-hd-windows-mountains-470utjlv3uwhi8fh.webp);
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        /* --- CONTENT CONTAINER --- */
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #e67e22;
+            margin: 10px auto;
+        }
+
+        /* --- CARDS GRID SYSTEM --- */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .btn-read {
+            display: inline-block;
+            margin-top: 15px;
+            color: #e67e22;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .btn-read:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media screen and (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            main {
+                margin-left: 0;
+            }
+            header {
+                height: 200px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <h2>RAY'S <span>TRIPS</span></h2>
+        </div>
+        <ul>
+            <li><a href="final-project-vertical.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="Lego-land.html"><i class="fas fa-cube"></i> Legoland Japan</a></li>
+            <li><a href="Maldives.html"><i class="fas fa-umbrella-beach"></i> Maldives</a></li>
+            <li><a href="basilica.html"><i class="fas fa-church"></i> Basilika St. Petrus</a></li>
+            <li><a href="info.html"><i class="fas fa-info-circle"></i> Profile Kelompok</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <div>
+                <h1>Singkap Keajaiban Dunia</h1>
+                <p>Cari Destinasi, Temukan Sensasi.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <h2 class="section-title">Destinasi Populer</h2>
+            
+            <div class="destinations-grid">
+                
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://asset.japan.travel/image/upload/v1583221649/aichi/1.park_entrance.jpg" alt="Legoland">
+                    </div>
+                    <div class="card-content">
+                        <h3>Legoland Japan</h3>
+                        <p>Terletak di Nagoya, taman hiburan ini adalah surga bagi keluarga. Nikmati Miniland dengan miniatur bangunan Jepang, wahana air, dan kreativitas tanpa batas dengan jutaan keping LEGO.</p>  
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg/500px-Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg" alt="Basilika Santo Petrus">
+                    </div>
+                    <div class="card-content">
+                        <h3>Basilika Santo Petrus</h3>
+                        <p>Salah satu gereja terbesar di dunia yang terletak di Vatikan. Mengagumi arsitektur Renaisans, kubah Michelangelo, dan suasana spiritual yang mendalam.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://www.sunsiyam.com/media/qnfnzgmq/ssiv_general_04.jpg?width=782&height=521&mode=max" alt="Maldives">
+                    </div>
+                    <div class="card-content">
+                        <h3>Maldives</h3>
+                        <p>Surga tropis dengan vila terapung, air kristal jernih, dan terumbu karang yang indah. Destinasi sempurna untuk bulan madu dan relaksasi mewah.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy;KELOMPOK 3 all rights reserve.</p>
+        </footer>
+    </main>
+
+</body>
+</html>
